@@ -1,0 +1,24 @@
+{
+ "market": {"S0": 100, "K": 100, "r": 0.05, "sigma": 0.2, "T": 1},
+ "bs_call": 10.450584,
+ "european_1M": [
+  {"method": "plain", "price": 10.461956, "se": 0.007363, "z": 1.545, "var_reduction": 1.00, "time_s": 0.1101, "efficiency_gain": 1.00},
+  {"method": "antithetic", "price": 10.463555, "se": 0.005204, "z": 2.493, "var_reduction": 2.00, "time_s": 0.0774, "efficiency_gain": 2.85},
+  {"method": "control (S_T)", "price": 10.456741, "se": 0.002806, "z": 2.194, "var_reduction": 6.88, "time_s": 0.1133, "efficiency_gain": 6.69},
+  {"method": "antithetic + control", "price": 10.452498, "se": 0.001376, "z": 1.391, "var_reduction": 28.62, "time_s": 0.0710, "efficiency_gain": 44.40}
+ ],
+ "convergence": [
+  {"paths": 1000, "plain": 10.200906, "plain_se": 0.461536, "ac": 10.502219, "ac_se": 0.096866},
+  {"paths": 10000, "plain": 10.642956, "plain_se": 0.151299, "ac": 10.463388, "ac_se": 0.028021},
+  {"paths": 100000, "plain": 10.466046, "plain_se": 0.046607, "ac": 10.443789, "ac_se": 0.008599},
+  {"paths": 1000000, "plain": 10.461986, "plain_se": 0.014733, "ac": 10.448729, "ac_se": 0.002746},
+  {"paths": 10000000, "plain": 10.456057, "plain_se": 0.004656, "ac": 10.450988, "ac_se": 0.000869},
+  {"paths": 40000000, "plain": 10.454391, "plain_se": 0.002328, "ac": 10.451204, "ac_se": 0.000435}
+ ],
+ "greeks": {"delta": [0.636938, 0.000288, 0.636831], "vega": [37.541847, 0.037845, 37.524035], "gamma": [0.018757, 0.000069, 0.018762]},
+ "asian": {"fixings": 52, "plain": [5.876490, 0.008126], "cv": [5.853985, 0.000224], "var_reduction": 1315.1, "geo_closed_form": 5.637432},
+ "scaling": [
+  {"threads": 1, "time_s": 0.7451, "speedup": 1.000},
+  {"threads": 2, "time_s": 0.5625, "speedup": 1.325}
+ ]
+}
